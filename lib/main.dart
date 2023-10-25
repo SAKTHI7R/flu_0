@@ -1,4 +1,5 @@
 import 'package:flu_0/auth/auth_respository.dart';
+import 'package:flu_0/auth/login/forgot_password_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -19,6 +20,9 @@ class MyApp extends StatelessWidget {
         create: (context) => AuthRepository(),
         child: LoginView(),
       ),
+      routes: {
+        '/forgot_password': (context) => const ForgotPasswordPage(),
+      },
       debugShowCheckedModeBanner: false,
     );
   }
